@@ -5,6 +5,7 @@ import { themeOptions } from '../Utils/theme';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+
 const Footer = () => {
 
     const {setTheme, defaultTheme} = useTheme();
@@ -20,8 +21,12 @@ const Footer = () => {
     <div className='footer'>
 
       <div className="links">
-          <GitHubIcon style={{marginRight:'4px'}}/>
-          <LinkedInIcon/>
+        <a href='https://github.com/Siddhu1925'>
+        <GitHubIcon style={{marginRight:'4px'}}/>
+        </a>
+        <a href='https://www.linkedin.com/in/siddhu-kurupati-271bbb259/'>
+        <LinkedInIcon/>
+        </a>
       </div>
 
       <div className="themes">  

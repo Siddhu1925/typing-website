@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import { ThemeProvider } from "styled-components";
 import Footer from "./Components/Footer";
 import TypingBox from "./Components/TypingBox";
@@ -12,9 +12,7 @@ function App() {
   const {theme} = useTheme();
   const words = randomWords(100);
 
-  // useEffect(()=>{
-  //   console.log("theme in app", theme);
-  // },[theme]);
+
 
   return (
 
