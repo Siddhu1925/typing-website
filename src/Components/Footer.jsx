@@ -21,10 +21,10 @@ const Footer = () => {
     <div className='footer'>
 
       <div className="links">
-        <a href='https://github.com/Siddhu1925'>
+        <a href='https://github.com/'>
         <GitHubIcon style={{marginRight:'4px'}}/>
         </a>
-        <a href='https://www.linkedin.com/in/siddhu-kurupati-271bbb259/'>
+        <a href='https://www.linkedin.com/'>
         <LinkedInIcon/>
         </a>
       </div>
