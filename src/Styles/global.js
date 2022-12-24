@@ -54,7 +54,7 @@ body{
 }
 
 .correct{
-    color: ${({theme})=>theme.title};
+    color:green;
 }
 
 .incorrect{
@@ -150,4 +150,30 @@ a{
     cursor: pointer;
 }
 
+.header{
+    display: flex;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-top:10px;
+}
+.logo{
+    margin-right:auto;
+    color:${({theme})=>theme.typeBoxText};
+    padding:0.6rem;
+    font-size:60px;
+    display:flex;
+    height:20px;
+    align-items: center;
+}
+
+.github-button{
+    width: 400px;
+    text-align: center;
+    background: blue;
+    height: 3rem;
+    border: 2px solid;
+    border-radius: 10px;
+}
 `;
