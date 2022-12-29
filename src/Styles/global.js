@@ -13,6 +13,11 @@ body{
     padding:0;
     margin:0;
     transition: all 0.25s linear;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .canvas{
@@ -21,7 +26,7 @@ body{
     grid-auto-flow: row;
     grid-template-row: auto 1fr auto;
     gap: 0.5rem;
-    padding:1rem;
+    padding:2rem;
     width:100vw;
     text-align: center;
     align-items: center;
@@ -54,11 +59,16 @@ body{
 }
 
 .correct{
-    color:green;
+    color: green;
 }
 
 .incorrect{
     color: red;
+}
+.themes{
+    margin-left:auto;
+    margin-right-auto;
+    width:150px;
 }
 
 .current{
@@ -87,22 +97,28 @@ body{
     }
 }
 
-.extra{
-    color: blue;
-  }
-  
-
 .skipped{
     color: grey;
 }
 
+.extra{
+    color: blue;
+  }
+
 .footer{
     display:flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-self: end;
     width: 1000px;
     margin-left:auto;
     margin-right:auto;
 }
+
+.actual-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
 .stats-box{
     display: flex;
     max-width: 1000px;
@@ -110,17 +126,21 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
 .left-stats{
     width: 30%;
     padding: 30px;
 }
+
 .right-stats{
     width: 70%;
 }
+
 .title{
     font-size: 20px;
     color: ${({theme})=>theme.typeBoxText};
 }
+
 .subtitle{
     font-size: 30px;
     color: ${({theme})=>theme.title};
@@ -130,6 +150,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 .upper-menu{
     display:flex;
     width:1000px;
@@ -139,31 +160,41 @@ a{
     font-size:1.35rem;
     padding:0.5rem;
 }
-.time-modes{
+
+.time-modes, .word-modes{
     display:flex;
 }
-.time{
+.time, .no-of-word{
     margin-right:5px;
 }
-.time:hover{
+.time:hover, .no-of-word:hover{
     color:${({theme})=>theme.typeBoxText};
     cursor: pointer;
+}
+.mode{
+    border-radius:4px;
+    cursor: pointer;
+    padding:4px;
+    color:black;
+    background:white;
 }
 
 .header{
     display: flex;
     width: 1000px;
+    align-self: stretch;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
-    margin-top:10px;
 }
+
 .logo{
     margin-right:auto;
     color:${({theme})=>theme.typeBoxText};
     padding:0.6rem;
-    font-size:60px;
+    font-size:40px;
     display:flex;
+    gap: 10px;
     height:20px;
     align-items: center;
 }
@@ -187,6 +218,7 @@ a{
     justify-content: center;
     align-text: center;
 }
+
 .user{
     width: 50%;
     display: flex;
@@ -196,6 +228,7 @@ a{
     padding: 1rem;
     border-right: 2px solid;
 }
+
 .info{
     width: 60%;
     padding: 1rem;
@@ -204,6 +237,7 @@ a{
 .picture{
     width: 40%;
 }
+
 .total-tests{
     width: 50%;
     font-size: 3rem;
@@ -211,10 +245,12 @@ a{
     justify-content: center;
     align-items: center;
 }
+
 .graph, .table{
     width: 1000px;
     margin: auto;
 }
+
 .center-of-screen{
     display:flex;
     min-height:100vh;
@@ -223,10 +259,16 @@ a{
     text-align: center;
     font-size: 3rem;
 }
+
 .logo{
     display: flex;
     gap: 10px;
 }
+
+img{
+    border-radius:15px;
+ }
+
 .compare-btn{
     cursor: pointer;
     color: ${({theme})=>theme.background};
@@ -234,5 +276,46 @@ a{
     padding: 0.3rem;
     border-radius: 5px;
     margin-top: -5px;
+    font-size:20px;
+}
+.Compared{
+    display:flex;
+    flex-direction:row;
+    padding:2rem;
+    column-gap:30px;
+    text-align:center;
+}
+
+.you{
+    text-decoration:underline;
+    font-size:30px;
+    margin-bottom:80px;
+    color:#F67280;
+    }
+    
+ .comparing{
+     text-decoration:underline;
+     font-size:30px;
+     margin-bottom:80px;
+     color:#F67280;
+    }
+
+.instruction{
+    color: ${({theme})=>theme.title};
+}
+
+.hint{
+    kbd{
+        background: ${({theme})=>theme.title};
+        color: ${({theme})=>theme.background};
+        padding: 2.5px 5px;
+        border-radius: 4px; 
+    }
+}
+.R-Button{
+border-radius:50px;
+background-color:black;
+color:white;
+font-size:20px;
 }
 `;

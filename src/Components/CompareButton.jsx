@@ -67,7 +67,7 @@ const CompareButton = () => {
     return (
         <div>
             <div className='compare-btn' onClick={handleClick}>
-                COMPARE
+                COMPARE⛖
             </div>
 
             <Modal

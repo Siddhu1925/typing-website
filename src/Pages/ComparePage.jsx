@@ -52,11 +52,14 @@ const ComparePage = () => {
         getData();
     },[]);
   return (
-    <div>
+    <div className='Compared'>
+        <div className='you'>You </div>
         <div className="graph">
             <Graph graphData={loggedinUserGraphData} type='date'/>
         </div>
+        <hr />
         <div className="graph">
+            <div className="comparing">{username}</div>
             <Graph graphData={compareUserGraphData} type='date'/>
         </div>
         

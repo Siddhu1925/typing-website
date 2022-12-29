@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core';
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
 import GoogleButton from 'react-google-button';
+import GithubButton from 'react-github-login-button';
 import {signInWithPopup, GoogleAuthProvider, GithubAuthProvider} from 'firebase/auth';
 import { auth, db } from '../firebaseConfig';
 import {useAuthState} from 'react-firebase-hooks/auth';
@@ -150,12 +151,13 @@ const AccountIcon = () => {
                         onClick={signInWithGoogle}
                     />
                 </Box>
-                {/* <Box>
+                <Box>
                     <span>OR</span>
-                    <div className='github-button' onClick={signInWithGithub}>
-                        Login with Github
-                    </div>
-                </Box> */}
+                   <GithubButton
+                            style={{width:'100%',marginTop:'8px'}}
+                        onClick={signInWithGithub}
+                    />
+                </Box>
             </div>
         </Modal>
     </div>
